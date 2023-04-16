@@ -66,4 +66,6 @@ void compute_gru(const GRULayer* gru, float* state, const float* input);
 
 void compute_rnn(RNNState* rnn, float* gains, float* vad, const float* input);
 
+void compute_rnn_vadonly(RNNState* rnn, float* vad, const float* input);
+
 #endif /* RNN_H_ */

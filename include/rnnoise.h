@@ -96,6 +96,14 @@ RNNOISE_EXPORT float rnnoise_process_frame(DenoiseState* st,
                                            const float* in);
 
 /**
+ * Compute VAD without denoising
+ *
+ * in must be at least rnnoise_get_frame_size() large.
+ */
+RNNOISE_EXPORT float rnnoise_process_vadonly(DenoiseState* st,
+                                             const float* in);
+
+/**
  * Load a model from a file
  *
  * It must be deallocated with rnnoise_model_free()
